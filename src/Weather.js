@@ -17,6 +17,7 @@ const Weather = () => {
     };
 
     const cities = [
+        { id: 0, name: 'City Name' },
         { id: 1, name: 'Sydney' },
         { id: 2, name: 'Melbourne' },
         { id: 3, name: 'Brisbane' },
@@ -30,13 +31,16 @@ const Weather = () => {
     // Render the selection
     return (
         <div>
-            <label htmlFor="city">Choose a city:</label>
-            <select id="city" name="city" onChange={(event) => setCity(event.target.value)}>
-                {cities.map(city => (
-                    <option key={city.id} value={city.name}>{city.name}</option>
-                ))}
-            </select>
-            <button onClick={getWeatherData}>Get Weather</button>
+            <h1>Australia Weather</h1>
+            <div id="city-select">
+                <label htmlFor="city">Choose a city: </label>
+                <select id="city" name="city" onChange={(event) => setCity(event.target.value)}>
+                    {cities.map(city => (
+                        <option key={city.id} value={city.name}>{city.name}</option>
+                    ))}
+                </select>
+            </div>
+            <button class="button-1" onClick={getWeatherData}>get weather</button>
             {weatherData && (
                 <div>
                 <h1>{weatherData.name}</h1>
