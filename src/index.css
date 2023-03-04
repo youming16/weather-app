@@ -13,6 +13,13 @@ code {
     monospace;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* sets the height of the container to 100% of the viewport height */
+}
+
 
 
 .button-1 {

@@ -30,7 +30,7 @@ const Weather = () => {
   
     // Render the selection
     return (
-        <div>
+        <div class="container">
             <h1>Australia Weather</h1>
             <div id="city-select">
                 <label htmlFor="city">Choose a city: </label>
